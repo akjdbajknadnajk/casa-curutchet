@@ -317,6 +317,18 @@ body[data-v="b"] .tablas-banda{ margin-left:0; margin-right:0; }
 .hecho img{ width:100%; }
 :root[data-theme="dark"] .hecho img{ filter:invert(.9); }
 @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hecho img{ filter:invert(.9); } }
+
+/* La página es un objeto de papel: misma paleta clara en modo claro y oscuro */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --fondo:#EAE3D5; --tinta:#243A52; --tinta-suave:#4C6078; --hilo:#A81C22; color-scheme:light; }
+  :root:not([data-theme="light"]) .logo, :root:not([data-theme="light"]) .casa-dark, :root:not([data-theme="light"]) .hecho img{ filter:none; }
+  :root:not([data-theme="light"]) .gracias .logo{ filter:invert(.92); }
+}
+:root[data-theme="dark"]{ --fondo:#EAE3D5; --tinta:#243A52; --tinta-suave:#4C6078; --hilo:#A81C22; color-scheme:light; }
+:root[data-theme="dark"] .logo, :root[data-theme="dark"] .casa-dark, :root[data-theme="dark"] .hecho img{ filter:none; }
+:root[data-theme="dark"] .gracias .logo{ filter:invert(.92); }
+.oscuro{ --tinta:#EFE7DB !important; --tinta-suave:#B9C4D0 !important; }
+.rojo{ --tinta:#F9F5EF !important; --tinta-suave:#F2D6D2 !important; }
 </style>
 </head>
 <body data-v="b">
